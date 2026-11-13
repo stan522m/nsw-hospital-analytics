@@ -13,7 +13,7 @@ st.set_page_config(
 # Connect to DuckDB (Read-Only mode for safety)
 @st.cache_resource
 def get_db_connection():
-    return duckdb.connect("nsw_healthcare_analytics_original_Q1_2025.db", read_only=True)
+    return duckdb.connect("nsw_healthcare_analytics_original", read_only=True)
 
 con = get_db_connection()
 
